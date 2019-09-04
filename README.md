@@ -13,7 +13,7 @@ The CSS/JS files are hashed for caching (and invalidating the cache when changes
 Clone the repository and install its dependencies.
 
 ```bash
-git@github.com:metonym/svelte-rollup-template.git
+git clone git@github.com:metonym/svelte-rollup-template.git
 cd svelte-rollup-template
 yarn install
 ```
