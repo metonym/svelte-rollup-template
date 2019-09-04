@@ -4,7 +4,9 @@
 
 This template extends the official [Svelte rollup template](https://github.com/sveltejs/template) by focusing on the post-build process.
 
-In addition to using a dedicated `build/` folder, this project uses PostHTML to post-process compiled assets. The CSS/JS files are hashed for caching (and invalidating the cache when changes are built) in production while the HTML markup is minified.
+In addition to separating the `public/` and `build/` folders, this project uses [PostHTML](https://github.com/posthtml/posthtml) to post-process compiled assets.
+
+The CSS/JS files are hashed for caching (and invalidating the cache when changes are built) in production while the HTML markup is minified.
 
 ## Getting Started
 
@@ -22,7 +24,7 @@ yarn install
 
 Runs the app in development mode with livereload enabled. Visit `http://localhost:3000` to view the app.
 
-To configure the port number, modify the `port` value in [rollup.config.js](rollup.config.js#L44).
+To configure the port number, modify the `port` value in [rollup.config.js](rollup.config.js#L45).
 
 ```diff
 serve({
