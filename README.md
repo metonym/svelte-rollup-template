@@ -2,7 +2,7 @@
 
 > Svelte Rollup template with static asset hashing and minification.
 
-This template extends the official [Svelte rollup template](https://github.com/sveltejs/template) by focusing on the post-build process.
+This template extends the official [Svelte rollup template](https://github.com/sveltejs/template) by focusing on the post-build process. The initial motivation was to address [an issue](https://github.com/sveltejs/template/issues/39) about hashing file names.
 
 In addition to separating the `public/` and `build/` folders, this project uses [PostHTML](https://github.com/posthtml/posthtml) to post-process compiled assets.
 
