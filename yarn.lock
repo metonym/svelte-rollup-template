@@ -1771,7 +1771,7 @@ levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-livereload@^0.8.0:
+livereload@0.8.0:
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/livereload/-/livereload-0.8.0.tgz#9af99cf8a262152cf7176b320accfc5d2ae4f8bf"
   integrity sha512-Hi5Na6VIK3e8zlgOS50fu+iOTKWj5hM0BE7NKpZkwnfWTnktTjA38ZUXa2NlJww8/GrdVhpnxdqlLad5fkO27g==
@@ -2524,13 +2524,13 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.17, postcss@^7.0.5:
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-posthtml-hash@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/posthtml-hash/-/posthtml-hash-0.2.0.tgz#ffa0efd8f410d09b00b896a552ee1360f0ae4595"
-  integrity sha512-/JHklA+7mCfVhyvzwudyzlsdqFo+A3lfe57xq6u8YBv8pM0jB05B83OlZgAO0D9yY0AsVMAYWzZ67BzuEE8nHA==
+posthtml-hash@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/posthtml-hash/-/posthtml-hash-0.2.1.tgz#7fa8ea8f2de7583b30d7f9f2a274d1613b172e2b"
+  integrity sha512-semF59JXbVuclZcjjYOfrlsVc6RCeZvakqEB7apmvml6FxHfQg7ZvppLcVWVHvWZ3nabOnXVEC1G9t0IEk6x1A==
   dependencies:
     hasha "^5.0.0"
-    posthtml "^0.11.4"
+    posthtml "^0.11.6"
 
 posthtml-parser@^0.4.1:
   version "0.4.1"
@@ -2772,12 +2772,12 @@ rollup-plugin-copy@^3.1.0:
     globby "10.0.1"
     is-plain-object "^3.0.0"
 
-rollup-plugin-livereload@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-livereload/-/rollup-plugin-livereload-1.0.1.tgz#b1df6642d55cafcd87dac54bc4f7a657ab859fdf"
-  integrity sha512-gNuUr+L/8+CR/oKF8ftJNvJEww6iGzNc8+3XcCOvgKWgjhzUBETs8sNONIthcCvVYC2c2PIKMWgQwrYbxRRdwg==
+rollup-plugin-livereload@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-livereload/-/rollup-plugin-livereload-1.0.3.tgz#0a7bb6094032440b8fac43cc8a0e1d54dfe0f1c7"
+  integrity sha512-K626KL5JAF3PGHdcVFHaR+d1w3c4BOzdcJkAnXHCKbL41byLEux/bjaqy1/uNVrpXlxeRPJu4fJfMTl5LHbEpA==
   dependencies:
-    livereload "^0.8.0"
+    livereload "0.8.0"
 
 rollup-plugin-node-resolve@^5.2.0:
   version "5.2.0"
@@ -2807,10 +2807,10 @@ rollup-plugin-svelte@^5.1.0:
     rollup-pluginutils "^2.3.3"
     sourcemap-codec "^1.4.4"
 
-rollup-plugin-terser@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-terser/-/rollup-plugin-terser-5.1.1.tgz#e9d2545ec8d467f96ba99b9216d2285aad8d5b66"
-  integrity sha512-McIMCDEY8EU6Y839C09UopeRR56wXHGdvKKjlfiZG/GrP6wvZQ62u2ko/Xh1MNH2M9WDL+obAAHySljIZYCuPQ==
+rollup-plugin-terser@^5.1.2:
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-terser/-/rollup-plugin-terser-5.1.2.tgz#3e41256205cb75f196fc70d4634227d1002c255c"
+  integrity sha512-sWKBCOS+vUkRtHtEiJPAf+WnBqk/C402fBD9AVHxSIXMqjsY7MnYWKYEUqGixtr0c8+1DjzUEPlNgOYQPVrS1g==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     jest-worker "^24.6.0"
