@@ -2,11 +2,11 @@
 
 > Svelte Rollup template with static asset hashing and minification.
 
-This template extends the official [Svelte rollup template](https://github.com/sveltejs/template) by focusing on the post-build process. The initial motivation was to address [an issue](https://github.com/sveltejs/template/issues/39) about hashing file names.
+This template extends the official [Svelte rollup template](https://github.com/sveltejs/template) by focusing on the post-build process. The initial motivation was to address [an issue](https://github.com/sveltejs/template/issues/39) about hashing file names for production.
 
-In addition to separating the `public/` and `build/` folders, this project uses [PostHTML](https://github.com/posthtml/posthtml) to post-process compiled assets.
+This project uses [PostHTML](https://github.com/posthtml/posthtml) to post-process compiled assets.
 
-The CSS/JS files are hashed for caching (and invalidating the cache when changes are built) in production while the HTML markup is minified.
+The CSS/JS files are hashed for caching (and invalidating the cache when changes are built) and the HTML is minified.
 
 ## Getting Started
 
@@ -40,11 +40,11 @@ Builds the app in production mode.
 
 First, the `build/` folder is removed. Next, Rollup is run in production. Similar to development mode, the `public/` folder is first copied into `build/` before Rollup outputs the minified `bundle.css` and `bundle.js`.
 
-Lastly, the [postbuild.js](postbuild.js) script is run, executing [PostHTML](https://github.com/posthtml/posthtml) plugins on the static assets in `build/`.
+Lastly, the [postbuild.js](postbuild.js) script runs a couple of [PostHTML](https://github.com/posthtml/posthtml) plugins on the static assets in `build/`.
 
 The first plugin ([posthtml-hash](https://github.com/posthtml/posthtml-hash)) hashes `bundle.css` and `bundle.js`. The second plugin ([htmlnano](https://github.com/posthtml/htmlnano)) minifies `build/index.html`.
 
-#### Hashing Static Assets
+#### 1/2 Hashing Static Assets
 
 ```html
 <!-- Result of `posthtml-hash` -->
@@ -61,7 +61,7 @@ The first plugin ([posthtml-hash](https://github.com/posthtml/posthtml-hash)) ha
 </html>
 ```
 
-#### Minifying `build/index.html`
+#### 2/2 Minifying `build/index.html`
 
 ```html
 <!-- Result of `htmlnano` -->
