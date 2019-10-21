@@ -2514,13 +2514,13 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.17, postcss@^7.0.5:
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-posthtml-hash@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/posthtml-hash/-/posthtml-hash-0.2.1.tgz#7fa8ea8f2de7583b30d7f9f2a274d1613b172e2b"
-  integrity sha512-semF59JXbVuclZcjjYOfrlsVc6RCeZvakqEB7apmvml6FxHfQg7ZvppLcVWVHvWZ3nabOnXVEC1G9t0IEk6x1A==
+posthtml-hash@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/posthtml-hash/-/posthtml-hash-0.2.2.tgz#4655802a40a92e0d76e376b214fbc7d007bf756f"
+  integrity sha512-wz45CvLN+NK2+m0u4677p4gx8W92MeHO/ROMuPKoE8hm4P/SND83OE1qb7wOOeJJwkofnskXBz28hXBADo3pUQ==
   dependencies:
     hasha "^5.0.0"
-    posthtml "^0.11.6"
+    posthtml "^0.12.0"
 
 posthtml-parser@^0.4.1:
   version "0.4.1"
@@ -2535,7 +2535,7 @@ posthtml-render@^1.1.5:
   resolved "https://registry.yarnpkg.com/posthtml-render/-/posthtml-render-1.1.5.tgz#387934e85438a3de77085fbc7d264efb00bd0e0f"
   integrity sha512-yvt54j0zCBHQVEFAuR+yHld8CZrCa/E1Z/OcFNCV1IEWTLVxT8O7nYnM4IIw1CD4r8kaRd3lc42+0lgCKgm87w==
 
-posthtml@^0.11.4, posthtml@^0.11.6:
+posthtml@^0.11.4:
   version "0.11.6"
   resolved "https://registry.yarnpkg.com/posthtml/-/posthtml-0.11.6.tgz#e349d51af7929d0683b9d8c3abd8166beecc90a8"
   integrity sha512-C2hrAPzmRdpuL3iH0TDdQ6XCc9M7Dcc3zEW5BLerY65G4tWWszwv6nG/ksi6ul5i2mx22ubdljgktXCtNkydkw==
