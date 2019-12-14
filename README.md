@@ -2,11 +2,16 @@
 
 > Svelte Rollup template with static asset hashing and minification.
 
-This template extends the official [Svelte rollup template](https://github.com/sveltejs/template) by focusing on the post-build process. The initial motivation was to address [an issue](https://github.com/sveltejs/template/issues/39) about hashing file names for production.
+This template extends the official [Svelte rollup template](https://github.com/sveltejs/template) by focusing on the post-build process.
 
-This project uses [PostHTML](https://github.com/posthtml/posthtml) to post-process compiled assets.
+The initial motivation was to address [an issue](https://github.com/sveltejs/template/issues/39) about hashing file names for production.
 
-The CSS/JS files are hashed for caching (and invalidating the cache when changes are built) and the HTML is minified.
+**Key Differences**
+
+- CSS/JS files are hashed for caching
+- HTML is minified
+
+This project uses [PostHTML](https://github.com/posthtml/posthtml) to process compiled assets in the postbuild stage.
 
 ## Getting Started
 
@@ -36,35 +41,37 @@ serve({
 
 ### `yarn build`
 
-Builds the app in production mode.
+Builds the app for production.
 
-First, the `build/` folder is removed. Next, Rollup is run in production. Similar to development mode, the `public/` folder is first copied into `build/` before Rollup outputs the minified `bundle.css` and `bundle.js`.
+The app is compiled and emitted to the `build` folder.
 
-Lastly, the [postbuild.js](postbuild.js) script runs a couple of [PostHTML](https://github.com/posthtml/posthtml) plugins on the static assets in `build/`.
+Then, the [`postbuild` script](postbuild.js) script runs [PostHTML](https://github.com/posthtml/posthtml) on the static build.
 
-The first plugin ([posthtml-hash](https://github.com/posthtml/posthtml-hash)) hashes `bundle.css` and `bundle.js`. The second plugin ([htmlnano](https://github.com/posthtml/htmlnano)) minifies `build/index.html`.
+#### Asset Hashing
 
-#### 1/2 Hashing Static Assets
+[posthtml-hash](https://github.com/posthtml/posthtml-hash) hashes `bundle.css` and `bundle.js`.
 
-```html
-<!-- Result of `posthtml-hash` -->
+```diff
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>Svelte Rollup Template</title>
-    <link rel="stylesheet" href="bundle.b19ea05c629cee24e7b1.css">
+-   <link rel="stylesheet" href="bundle.css">
++   <link rel="stylesheet" href="bundle.b19ea05c629cee24e7b1.css">
   </head>
   <body>
-    <script src="bundle.d84688974c6150c07e5f.js"></script>
+-   <script src="bundle.js"></script>
++   <script src="bundle.d84688974c6150c07e5f.js"></script>
   </body>
 </html>
 ```
 
-#### 2/2 Minifying `build/index.html`
+#### Minification
+
+[htmlnano](https://github.com/posthtml/htmlnano) minifies `build/index.html`.
 
 ```html
-<!-- Result of `htmlnano` -->
 <!DOCTYPE html><html><head><meta charset="utf-8"><title>Svelte Rollup Template</title><link rel="stylesheet" href="bundle.b19ea05c629cee24e7b1.css"></head><body> <script src="bundle.d84688974c6150c07e5f.js"></script> </body></html>
 ```
 
