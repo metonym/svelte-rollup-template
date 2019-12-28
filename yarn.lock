@@ -2583,10 +2583,10 @@ postcss@^7.0.14:
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-posthtml-hash@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/posthtml-hash/-/posthtml-hash-0.2.2.tgz#4655802a40a92e0d76e376b214fbc7d007bf756f"
-  integrity sha512-wz45CvLN+NK2+m0u4677p4gx8W92MeHO/ROMuPKoE8hm4P/SND83OE1qb7wOOeJJwkofnskXBz28hXBADo3pUQ==
+posthtml-hash@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/posthtml-hash/-/posthtml-hash-0.2.3.tgz#d5f5446555111c682777df85aab1ba2399f0127e"
+  integrity sha512-p3eruE0WaWzji2s3tWatlM3vlV24vxQDs+HW4y6zC4rFMOBxh4nKAND9KMpotkjVwCDzSraxzGvpu5/5MYHUFQ==
   dependencies:
     hasha "^5.0.0"
     posthtml "^0.12.0"
