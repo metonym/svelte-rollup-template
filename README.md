@@ -6,12 +6,12 @@ This template extends the official [Svelte rollup template](https://github.com/s
 
 The initial motivation was to address [an issue](https://github.com/sveltejs/template/issues/39) about hashing file names for production.
 
-**Key Differences**
+## Key Differences
 
-- CSS/JS files are hashed for caching
+- CSS/JS files are hashed
 - HTML is minified
 
-This project uses [PostHTML](https://github.com/posthtml/posthtml) to process compiled assets in the postbuild stage.
+This project uses [PostHTML](https://github.com/posthtml/posthtml) to process compiled assets after the build stage.
 
 ## Getting Started
 
@@ -27,9 +27,9 @@ yarn install
 
 ### `yarn develop`
 
-Runs the app in development mode with livereload enabled. Visit `http://localhost:3000` to view the app.
+Runs the app in development mode with livereload enabled. Visit [http://localhost:3000](http://localhost:3000) to view the app.
 
-To configure the port number, modify the `port` value in [rollup.config.js](rollup.config.js#L45).
+The port number can be customized in [rollup.config.js](rollup.config.js#L45).
 
 ```diff
 serve({
@@ -43,9 +43,7 @@ serve({
 
 Builds the app for production.
 
-The app is compiled and emitted to the `build` folder.
-
-Then, the [`postbuild` script](postbuild.js) script runs [PostHTML](https://github.com/posthtml/posthtml) on the static build.
+After the app is compiled to the `build` folder, the [`postbuild` script](postbuild.js) script runs [PostHTML](https://github.com/posthtml/posthtml) on the static assets.
 
 #### Asset Hashing
 
@@ -74,6 +72,10 @@ Then, the [`postbuild` script](postbuild.js) script runs [PostHTML](https://gith
 ```html
 <!DOCTYPE html><html><head><meta charset="utf-8"><title>Svelte Rollup Template</title><link rel="stylesheet" href="bundle.b19ea05c629cee24e7b1.css"></head><body> <script src="bundle.d84688974c6150c07e5f.js"></script> </body></html>
 ```
+
+## Limitations
+
+Currently, only CSS and JS files are hashed.
 
 ## License
 
