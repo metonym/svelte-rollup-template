@@ -1,6 +1,6 @@
 {
   "name": "svelte-rollup-template",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "license": "MIT",
   "description": "Svelte Rollup template with static asset hashing and minification",
   "author": "Eric Liu (https://github.com/metonym)",
