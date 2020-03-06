@@ -2,11 +2,13 @@
 
 > Svelte Rollup template with static asset hashing and minification.
 
-This template extends the official [Svelte rollup template](https://github.com/sveltejs/template) by focusing on the post-build process.
+This template enhances the post-build process of the official [Svelte rollup template](https://github.com/sveltejs/template). The official template does not hash static assets (CSS/JS) when building for production.
 
-The initial motivation was to address [an issue](https://github.com/sveltejs/template/issues/39) about hashing file names for production.
+The initial motivation was to address [an issue about hashing file names](https://github.com/sveltejs/template/issues/39) for production.
 
-## Key Differences
+## Key Features
+
+When building for production...
 
 - CSS/JS files are hashed
 - HTML is minified
