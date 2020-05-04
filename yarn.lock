@@ -1908,10 +1908,10 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-posthtml-hash@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/posthtml-hash/-/posthtml-hash-0.2.3.tgz#d5f5446555111c682777df85aab1ba2399f0127e"
-  integrity sha512-p3eruE0WaWzji2s3tWatlM3vlV24vxQDs+HW4y6zC4rFMOBxh4nKAND9KMpotkjVwCDzSraxzGvpu5/5MYHUFQ==
+posthtml-hash@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/posthtml-hash/-/posthtml-hash-0.3.0.tgz#b327e9b8dcb9db053fd90b267ff66d5806670333"
+  integrity sha512-7APe1shMBfqqyhCfJZCChro8SYXnoWcTQe1+6qTLNOVLNiyDJ4LWPzo/t3qubZrTCudBWrM8M4LNpz396IcCtg==
   dependencies:
     hasha "^5.0.0"
     posthtml "^0.12.0"
