@@ -2,9 +2,25 @@
 
 > Svelte Rollup template with static asset hashing and minification.
 
-This template enhances the post-build process of the official [Svelte rollup template](https://github.com/sveltejs/template). The official template does not hash static assets (CSS/JS) when building for production.
+This template augments the official [Svelte rollup template](https://github.com/sveltejs/template) by hashing static assets (CSS/JS) for production.
 
-The initial motivation was to address [an issue about hashing file names](https://github.com/sveltejs/template/issues/39) for production.
+This provides a solution regarding **[a GitHub issue about hashing file names](https://github.com/sveltejs/template/issues/39)**.
+
+```diff
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Svelte Rollup Template</title>
+-   <link rel="stylesheet" href="bundle.css">
++   <link rel="stylesheet" href="bundle.b19ea05c629cee24e7b1.css">
+  </head>
+  <body>
+-   <script src="bundle.js"></script>
++   <script src="bundle.3df36d777ae1e0db2646.js"></script>
+  </body>
+</html>
+```
 
 ## Key Features
 
@@ -51,28 +67,12 @@ After the app is compiled to the `build` folder, the [`postbuild` script](postbu
 
 [posthtml-hash](https://github.com/posthtml/posthtml-hash) hashes `bundle.css` and `bundle.js`.
 
-```diff
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Svelte Rollup Template</title>
--   <link rel="stylesheet" href="bundle.css">
-+   <link rel="stylesheet" href="bundle.b19ea05c629cee24e7b1.css">
-  </head>
-  <body>
--   <script src="bundle.js"></script>
-+   <script src="bundle.d84688974c6150c07e5f.js"></script>
-  </body>
-</html>
-```
-
 #### Minification
 
 [htmlnano](https://github.com/posthtml/htmlnano) minifies `build/index.html`.
 
 ```html
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>Svelte Rollup Template</title><link rel="stylesheet" href="bundle.b19ea05c629cee24e7b1.css"></head><body> <script src="bundle.d84688974c6150c07e5f.js"></script> </body></html>
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Svelte Rollup Template</title><link rel="stylesheet" href="bundle.b19ea05c629cee24e7b1.css"></head><body> <script src="bundle.3df36d777ae1e0db2646.js"></script> </body></html>
 ```
 
 ## Limitations
