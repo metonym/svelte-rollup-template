@@ -12,12 +12,12 @@ This provides a solution regarding **[a GitHub issue about hashing file names](h
   <head>
     <meta charset="utf-8">
     <title>Svelte Rollup Template</title>
--   <link rel="stylesheet" href="bundle.css">
-+   <link rel="stylesheet" href="bundle.b19ea05c629cee24e7b1.css">
+-   <link rel="stylesheet" href="bundle.[hash].css">
++   <link rel="stylesheet" href="bundle.5ccf24860b75522d3daf.css">
   </head>
   <body>
--   <script src="bundle.js"></script>
-+   <script src="bundle.3df36d777ae1e0db2646.js"></script>
+-   <script src="bundle.[hash].js"></script>
++   <script src="bundle.6c40f5d525738d004a3c.js"></script>
   </body>
 </html>
 ```
