@@ -33,12 +33,12 @@ This project uses [PostHTML](https://github.com/posthtml/posthtml) to process co
 
 ## Getting Started
 
-Clone the repository and install its dependencies.
+Quickly scaffold a new project using [degit](https://github.com/Rich-Harris/degit):
 
 ```bash
-git clone git@github.com:metonym/svelte-rollup-template.git
-cd svelte-rollup-template
-yarn install
+npx degit github:metonym/svelte-rollup-template my-app
+cd my-app
+yarn
 ```
 
 ## Available Scripts
@@ -72,12 +72,8 @@ After the app is compiled to the `build` folder, the [`postbuild` script](postbu
 [htmlnano](https://github.com/posthtml/htmlnano) minifies `build/index.html`.
 
 ```html
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>Svelte Rollup Template</title><link rel="stylesheet" href="bundle.b19ea05c629cee24e7b1.css"></head><body> <script src="bundle.3df36d777ae1e0db2646.js"></script> </body></html>
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Svelte Rollup Template</title><link rel="stylesheet" href="bundle.5ccf24860b75522d3daf.css"></head><body> <script src="bundle.7d7b7b53409b383e630b.js"></script> </body></html>
 ```
-
-## Limitations
-
-Currently, only CSS and JS files are hashed.
 
 ## License
 
