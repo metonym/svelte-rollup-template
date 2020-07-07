@@ -1,10 +1,12 @@
 # svelte-rollup-template
 
-> Svelte Rollup template with static asset hashing and minification.
+> Svelte Rollup template with static asset hashing and HTML minification.
 
-This template augments the official [Svelte rollup template](https://github.com/sveltejs/template) by hashing static assets (CSS/JS) for production.
+This template supplements the official [Svelte Rollup template](https://github.com/sveltejs/template) by hashing CSS/JS file names when building for production. In addition, the template HTML is minified. 
 
-This provides a solution regarding **[a GitHub issue about hashing file names](https://github.com/sveltejs/template/issues/39)**.
+This set-up is a solution for a **[GitHub issue about hashing file names](https://github.com/sveltejs/template/issues/39)**.
+
+See [rollup.config.js](rollup.config.js) for how this is done.
 
 ```diff
 <!DOCTYPE html>
@@ -22,18 +24,18 @@ This provides a solution regarding **[a GitHub issue about hashing file names](h
 </html>
 ```
 
-## Key Features
+## Key Differences
 
 When building for production...
 
-- CSS/JS files are hashed
+- CSS/JS file names are hashed
 - HTML is minified
 
 This project uses [PostHTML](https://github.com/posthtml/posthtml) to process compiled assets after the build stage.
 
-## Getting Started
+## Quick Start
 
-Quickly scaffold a new project using [degit](https://github.com/Rich-Harris/degit):
+Scaffold a new project using [degit](https://github.com/Rich-Harris/degit):
 
 ```bash
 npx degit github:metonym/svelte-rollup-template my-app
@@ -45,9 +47,9 @@ yarn
 
 ### `yarn develop`
 
-Runs the app in development mode with livereload enabled. Visit [http://localhost:3000](http://localhost:3000) to view the app.
+Runs the app in development mode. Visit [http://localhost:3000](http://localhost:3000) to view the app.
 
-The port number can be customized in [rollup.config.js](rollup.config.js#L45).
+Customize the port number in [rollup.config.js](rollup.config.js#L60).
 
 ```diff
 serve({
@@ -61,7 +63,7 @@ serve({
 
 Builds the app for production.
 
-After the app is compiled to the `build` folder, the [`postbuild` script](postbuild.js) script runs [PostHTML](https://github.com/posthtml/posthtml) on the static assets.
+[PostHTML](https://github.com/posthtml/posthtml) is executed in a [custom Rollup plugin](rollup.config.js#L16) that taps into the `writeBundle` hook.
 
 #### Asset Hashing
 
