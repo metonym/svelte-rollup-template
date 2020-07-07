@@ -17,14 +17,16 @@ function hashStaticAssets() {
   return {
     name: "hash-static-assets",
     buildStart() {
+      // Cleans the `build` folder
       rimraf.sync("build");
     },
     writeBundle() {
       posthtml([
-        // Hashes `build/bundle.[hash].css` and `build/bundle.[hash].js`
+        // Hashes `bundle.[hash].css` and `bundle.[hash].js`
         hash({ path: "build" }),
 
         // Minifies `build/index.html`
+        // For documentation on custom options, see https://github.com/posthtml/htmlnano
         htmlnano(),
       ])
         .process(fs.readFileSync("build/index.html"))
@@ -42,9 +44,7 @@ export default {
     file: "build/bundle.[hash].js",
   },
   plugins: [
-    // Copies public folder into `build/`
     copy({ targets: [{ src: "public/*", dest: "build" }] }),
-
     svelte({
       dev: !IS_PROD,
       css: (css) => {
@@ -52,21 +52,15 @@ export default {
         css.write("build/bundle.[hash].css", !IS_PROD);
       },
     }),
-
     resolve(),
     commonjs(),
-
     !IS_PROD &&
       serve({
         contentBase: ["build"],
         port: 3000,
       }),
     !IS_PROD && livereload({ watch: "build" }),
-
-    // Minifies JavaScript bundle in production
     IS_PROD && terser(),
-
-    // Hashes CSS/JS using PostHTML after writing the bundle
     IS_PROD && hashStaticAssets(),
   ],
 };
