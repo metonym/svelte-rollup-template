@@ -5,8 +5,33 @@ import { terser } from "rollup-plugin-terser";
 import livereload from "rollup-plugin-livereload";
 import serve from "rollup-plugin-serve";
 import copy from "rollup-plugin-copy";
+import fs from "fs";
+import posthtml from "posthtml";
+import { hash } from "posthtml-hash";
+import htmlnano from "htmlnano";
+import rimraf from "rimraf";
 
 const IS_PROD = !process.env.ROLLUP_WATCH;
+
+function hashStaticAssets() {
+  return {
+    name: "hash-static-assets",
+    buildStart() {
+      rimraf.sync("build");
+    },
+    writeBundle() {
+      posthtml([
+        // Hashes `build/bundle.[hash].css` and `build/bundle.[hash].js`
+        hash({ path: "build" }),
+
+        // Minifies `build/index.html`
+        htmlnano(),
+      ])
+        .process(fs.readFileSync("build/index.html"))
+        .then((result) => fs.writeFileSync("build/index.html", result.html));
+    },
+  };
+}
 
 export default {
   input: "src/index.js",
@@ -41,6 +66,7 @@ export default {
     // Minifies JavaScript bundle in production
     IS_PROD && terser(),
 
-    // See `postbuild.js` for PostHTML plugins executed after building for production
+    // Hashes CSS/JS using PostHTML after writing the bundle
+    IS_PROD && hashStaticAssets(),
   ],
 };
