@@ -4,9 +4,7 @@
 
 This template supplements the official [Svelte Rollup template](https://github.com/sveltejs/template) by hashing CSS/JS file names when building for production. In addition, the template HTML is minified. 
 
-This set-up is a solution for a **[GitHub issue about hashing file names](https://github.com/sveltejs/template/issues/39)**.
-
-See [rollup.config.js](rollup.config.js) for how this is done.
+This set-up is a solution for a [GitHub issue about hashing file names](https://github.com/sveltejs/template/issues/39). See [rollup.config.js](rollup.config.js) for how this is done.
 
 ```diff
 <!DOCTYPE html>
