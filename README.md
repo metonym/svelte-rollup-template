@@ -1,6 +1,6 @@
 # svelte-rollup-template
 
-> Svelte Rollup template with static asset hashing and HTML minification.
+> Svelte Rollup template with file name hashing and HTML minification.
 
 This template supplements the official [Svelte Rollup template](https://github.com/sveltejs/template) by hashing CSS/JS file names when building for production. In addition, the template HTML is minified. 
 
@@ -36,8 +36,8 @@ This project uses [PostHTML](https://github.com/posthtml/posthtml) to process co
 Scaffold a new project using [degit](https://github.com/Rich-Harris/degit):
 
 ```bash
-npx degit github:metonym/svelte-rollup-template my-app
-cd my-app
+npx degit metonym/svelte-rollup-template svelte-app
+cd svelte-app
 yarn
 ```
 
@@ -47,7 +47,7 @@ yarn
 
 Runs the app in development mode. Visit [http://localhost:3000](http://localhost:3000) to view the app.
 
-Customize the port number in [rollup.config.js](rollup.config.js#L60).
+Customize the port number in [rollup.config.js](rollup.config.js#L57).
 
 ```diff
 serve({
