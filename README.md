@@ -2,7 +2,7 @@
 
 > Svelte Rollup template with file name hashing and HTML minification.
 
-This template supplements the official [Svelte Rollup template](https://github.com/sveltejs/template) by hashing CSS/JS file names when building for production. In addition, the template HTML is minified. 
+This template supplements the official [Svelte Rollup template](https://github.com/sveltejs/template) by hashing CSS/JS file names when building for production. In addition, the template HTML is minified.
 
 This set-up is a solution for a [GitHub issue about hashing file names](https://github.com/sveltejs/template/issues/39). See [rollup.config.js](rollup.config.js) for how this is done.
 
@@ -24,7 +24,7 @@ This set-up is a solution for a [GitHub issue about hashing file names](https://
 
 ## Key Differences
 
-When building for production...
+When building for production:
 
 - CSS/JS file names are hashed
 - HTML is minified
@@ -43,7 +43,7 @@ yarn
 
 ## Available Scripts
 
-### `yarn develop`
+### `yarn dev`
 
 Runs the app in development mode. Visit [http://localhost:3000](http://localhost:3000) to view the app.
 
@@ -70,10 +70,6 @@ Builds the app for production.
 #### Minification
 
 [htmlnano](https://github.com/posthtml/htmlnano) minifies `build/index.html`.
-
-```html
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>Svelte Rollup Template</title><link rel="stylesheet" href="bundle.5ccf24860b75522d3daf.css"></head><body> <script src="bundle.7d7b7b53409b383e630b.js"></script> </body></html>
-```
 
 ## License
 

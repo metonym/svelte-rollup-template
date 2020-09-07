@@ -3,7 +3,7 @@
   "version": "0.3.2",
   "license": "MIT",
   "scripts": {
-    "develop": "rollup -cw",
+    "dev": "rollup -cw",
     "build": "rollup -c"
   },
   "devDependencies": {
