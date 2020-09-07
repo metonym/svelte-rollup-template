@@ -47,7 +47,7 @@ export default {
       dev: !PROD,
       css: (css) => {
         // Emits CSS to file, disables CSS sourcemaps in production
-        css.write("build/bundle.[hash].css", !PROD);
+        css.write("bundle.[hash].css", !PROD);
       },
     }),
     resolve(),
@@ -56,7 +56,6 @@ export default {
         contentBase: ["build"],
         port: 3000,
       }),
-
     !PROD && livereload({ watch: "build" }),
     PROD && terser(),
     PROD && hashStaticAssets(),
