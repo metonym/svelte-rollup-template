@@ -71,6 +71,22 @@ Builds the app for production.
 
 [htmlnano](https://github.com/posthtml/htmlnano) minifies `build/index.html`.
 
+## Customization
+
+### Remove HTML minification
+
+```diff
+# rollup.config.js
+posthtml([
+  // Hashes `bundle.[hash].css` and `bundle.[hash].js`
+  hash({ path: "build" }),
+
+  // Minifies `build/index.html`
+  // Documentation: https://github.com/posthtml/htmlnano
+- htmlnano(),
+])
+```
+
 ## License
 
 [MIT](LICENSE)
