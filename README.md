@@ -78,11 +78,11 @@ Builds the app for production.
 ```diff
 # rollup.config.js
 posthtml([
-  // Hashes `bundle.[hash].css` and `bundle.[hash].js`
-  hash({ path: "build" }),
+  // hashes `bundle.[hash].css` and `bundle.[hash].js`
+  hash({ path: OUR_DIR }),
 
-  // Minifies `build/index.html`
-  // Documentation: https://github.com/posthtml/htmlnano
+  // minifies `build/index.html`
+  // https://github.com/posthtml/htmlnano
 - htmlnano(),
 ])
 ```

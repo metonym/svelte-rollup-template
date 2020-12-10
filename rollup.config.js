@@ -11,24 +11,27 @@ import htmlnano from "htmlnano";
 import rimraf from "rimraf";
 
 const PROD = !process.env.ROLLUP_WATCH;
+const OUT_DIR = "build";
 
-function hashStaticAssets() {
+function hashStatic() {
   return {
-    name: "hash-static-assets",
+    name: "hash-static",
     buildStart() {
-      rimraf.sync("build");
+      rimraf.sync(OUT_DIR);
     },
     writeBundle() {
       posthtml([
-        // Hashes `bundle.[hash].css` and `bundle.[hash].js`
-        hash({ path: "build" }),
+        // hashes `bundle.[hash].css` and `bundle.[hash].js`
+        hash({ path: OUT_DIR }),
 
-        // Minifies `build/index.html`
-        // Documentation: https://github.com/posthtml/htmlnano
+        // minifies `build/index.html`
+        // https://github.com/posthtml/htmlnano
         htmlnano(),
       ])
-        .process(fs.readFileSync("build/index.html"))
-        .then((result) => fs.writeFileSync("build/index.html", result.html));
+        .process(fs.readFileSync(`${OUT_DIR}/index.html`))
+        .then((result) =>
+          fs.writeFileSync(`${OUT_DIR}/index.html`, result.html)
+        );
     },
   };
 }
@@ -39,10 +42,10 @@ export default {
     sourcemap: !PROD,
     format: "iife",
     name: "app",
-    file: "build/bundle.[hash].js",
+    file: `${OUT_DIR}/bundle.[hash].js`,
   },
   plugins: [
-    copy({ targets: [{ src: "public/*", dest: "build" }] }),
+    copy({ targets: [{ src: "public/*", dest: OUT_DIR }] }),
     svelte({
       dev: !PROD,
       css: (css) => {
@@ -53,11 +56,11 @@ export default {
     resolve(),
     !PROD &&
       serve({
-        contentBase: ["build"],
+        contentBase: [OUT_DIR],
         port: 3000,
       }),
-    !PROD && livereload({ watch: "build" }),
+    !PROD && livereload({ watch: OUT_DIR }),
     PROD && terser(),
-    PROD && hashStaticAssets(),
+    PROD && hashStatic(),
   ],
 };
