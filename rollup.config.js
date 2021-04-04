@@ -55,10 +55,10 @@ export default {
     }),
     resolve(),
     !PROD &&
-      serve({
-        contentBase: [OUT_DIR],
-        port: 3000,
-      }),
+    serve({
+      contentBase: [OUT_DIR],
+      port: 3000,
+    }),
     !PROD && livereload({ watch: OUT_DIR }),
     PROD && terser(),
     PROD && hashStatic(),

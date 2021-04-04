@@ -7,18 +7,18 @@
     "build": "rollup -c"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^11.0.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
     "htmlnano": "^0.2.8",
     "posthtml": "^0.15.1",
     "posthtml-hash": "^1.2.2",
     "rimraf": "^3.0.2",
-    "rollup": "^2.34.2",
-    "rollup-plugin-copy": "^3.3.0",
+    "rollup": "^2.44.0",
+    "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-serve": "^1.1.0",
     "rollup-plugin-svelte": "^6.1.1",
     "rollup-plugin-terser": "^7.0.2",
-    "svelte": "^3.31.0"
+    "svelte": "^3.37.0"
   }
 }

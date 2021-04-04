@@ -44,10 +44,10 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@rollup/plugin-node-resolve@^11.0.0":
-  version "11.0.0"
-  resolved "https://registry.npmjs.org/@rollup/plugin-node-resolve/-/plugin-node-resolve-11.0.0.tgz#770458fb26691a686c5f29f37dded94832ffce59"
-  integrity sha512-8Hrmwjn1pLYjUxcv7U7IPP0qfnzEJWHyHE6CaZ8jbLM+8axaarJRB1jB6JgKTDp5gNga+TpsgX6F8iuvgOerKQ==
+"@rollup/plugin-node-resolve@^11.2.1":
+  version "11.2.1"
+  resolved "https://registry.yarnpkg.com/@rollup/plugin-node-resolve/-/plugin-node-resolve-11.2.1.tgz#82aa59397a29cd4e13248b106e6a4a1880362a60"
+  integrity sha512-yc2n43jcqVyGE2sqV5/YCmocy9ArjVAP/BeXyTtADTBBX6V0e5UMqwO8CdQ0kzjb6zu5P1qMzsScCMRvE9OlVg==
   dependencies:
     "@rollup/pluginutils" "^3.1.0"
     "@types/resolve" "1.17.1"
@@ -886,6 +886,11 @@ fsevents@~2.1.2:
   version "2.1.3"
   resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.1.3.tgz#fb738703ae8d2f9fe900c33836ddebee8b97f23e"
   integrity sha512-Auw9a4AxqWpa9GUfj370BMPzzyncfBABW8Mab7BGWBYDj4Isgq+cDKtx0i6u9jcX9pQDnswsaaOTgTmA5pEjuQ==
+
+fsevents@~2.3.1:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
+  integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
 
 function-bind@^1.1.1:
   version "1.1.1"
@@ -2067,10 +2072,10 @@ rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
-rollup-plugin-copy@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.npmjs.org/rollup-plugin-copy/-/rollup-plugin-copy-3.3.0.tgz#5ba230047f86b9f703a29288f242948a5580e7b9"
-  integrity sha512-euDjCUSBXZa06nqnwCNADbkAcYDfzwowfZQkto9K/TFhiH+QG7I4PUsEMwM9tDgomGWJc//z7KLW8t+tZwxADA==
+rollup-plugin-copy@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-copy/-/rollup-plugin-copy-3.4.0.tgz#f1228a3ffb66ffad8606e2f3fb7ff23141ed3286"
+  integrity sha512-rGUmYYsYsceRJRqLVlE9FivJMxJ7X6jDlP79fmFkL8sJs7VVMSVyA2yfyL+PGyO/vJs4A87hwhgVfz61njI+uQ==
   dependencies:
     "@types/fs-extra" "^8.0.1"
     colorette "^1.1.0"
@@ -2130,12 +2135,12 @@ rollup-pluginutils@^2.8.1, rollup-pluginutils@^2.8.2:
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^2.34.2:
-  version "2.34.2"
-  resolved "https://registry.npmjs.org/rollup/-/rollup-2.34.2.tgz#fa73e05c64df587e9ed4dc80d7d4e7d4a43f8908"
-  integrity sha512-mvtQLqu3cNeoctS+kZ09iOPxrc1P1/Bt1z15enuQ5feyKOdM3MJAVFjjsygurDpSWn530xB4AlA83TWIzRstXA==
+rollup@^2.44.0:
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.44.0.tgz#8da324d1c4fd12beef9ae6e12f4068265b6d95eb"
+  integrity sha512-rGSF4pLwvuaH/x4nAS+zP6UNn5YUDWf/TeEU5IoXSZKBbKRNTCI3qMnYXKZgrC0D2KzS2baiOZt1OlqhMu5rnQ==
   optionalDependencies:
-    fsevents "~2.1.2"
+    fsevents "~2.3.1"
 
 run-parallel@^1.1.9:
   version "1.1.9"
@@ -2289,10 +2294,10 @@ supports-color@^7.0.0:
   dependencies:
     has-flag "^4.0.0"
 
-svelte@^3.31.0:
-  version "3.31.0"
-  resolved "https://registry.npmjs.org/svelte/-/svelte-3.31.0.tgz#13966e5f55b975bc86675469bb2c58dd0e558d97"
-  integrity sha512-r+n8UJkDqoQm1b+3tA3Lh6mHXKpcfOSOuEuIo5gE2W9wQYi64RYX/qE6CZBDDsP/H4M+N426JwY7XGH4xASvGQ==
+svelte@^3.37.0:
+  version "3.37.0"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.37.0.tgz#dc7cd24bcc275cdb3f8c684ada89e50489144ccd"
+  integrity sha512-TRF30F4W4+d+Jr2KzUUL1j8Mrpns/WM/WacxYlo5MMb2E5Qy2Pk1Guj6GylxsW9OnKQl1tnF8q3hG/hQ3h6VUA==
 
 svgo@^1.0.0, svgo@^1.3.2:
   version "1.3.2"

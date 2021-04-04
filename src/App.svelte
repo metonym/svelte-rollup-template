@@ -6,11 +6,11 @@
   }
 </script>
 
+<button on:click={increment}>The count is {count}</button>
+
 <style>
-  h1 {
+  button {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
 </style>
-
-<h1 on:click={increment}>The count is {count}</h1>
