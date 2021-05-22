@@ -4,6 +4,7 @@ import { terser } from "rollup-plugin-terser";
 import livereload from "rollup-plugin-livereload";
 import serve from "rollup-plugin-serve";
 import copy from "rollup-plugin-copy";
+import css from 'rollup-plugin-css-only'
 import fs from "fs";
 import posthtml from "posthtml";
 import { hash } from "posthtml-hash";
@@ -47,12 +48,11 @@ export default {
   plugins: [
     copy({ targets: [{ src: "public/*", dest: OUT_DIR }] }),
     svelte({
-      dev: !PROD,
-      css: (css) => {
-        // Emits CSS to file, disables CSS sourcemaps in production
-        css.write("bundle.[hash].css", !PROD);
-      },
+      compilerOptions: {
+        dev: !PROD,
+      }
     }),
+    css({ output: 'bundle.[hash].css' }),
     resolve(),
     !PROD &&
     serve({
