@@ -13,11 +13,11 @@ This set-up is a solution for a [GitHub issue about hashing file names](https://
     <meta charset="utf-8">
     <title>Svelte Rollup Template</title>
 -   <link rel="stylesheet" href="bundle.[hash].css">
-+   <link rel="stylesheet" href="bundle.5ccf24860b75522d3daf.css">
++   <link rel="stylesheet" href="bundle.6c0c7a271e461f676648.css">
   </head>
   <body>
 -   <script src="bundle.[hash].js"></script>
-+   <script src="bundle.6c40f5d525738d004a3c.js"></script>
++   <script src="bundle.0cbdc0ab51655f1893e1.js"></script>
   </body>
 </html>
 ```
@@ -47,11 +47,11 @@ yarn
 
 Runs the app in development mode. Visit [http://localhost:3000](http://localhost:3000) to view the app.
 
-Customize the port number in [rollup.config.js](rollup.config.js#L57).
+Customize the port number in [rollup.config.js](rollup.config.js#L60).
 
 ```diff
 serve({
-  contentBase: ['build'],
+  contentBase: [OUT_DIR],
 - port: 3000
 + port: 8080
 })
@@ -61,19 +61,17 @@ serve({
 
 Builds the app for production.
 
-[PostHTML](https://github.com/posthtml/posthtml) is executed in a [custom Rollup plugin](rollup.config.js#L16) that taps into the `writeBundle` hook.
+[PostHTML](https://github.com/posthtml/posthtml) is executed in a [custom Rollup plugin](rollup.config.js#L17) that taps into the `writeBundle` hook.
 
-#### Asset Hashing
+#### Filename hashing
 
-[posthtml-hash](https://github.com/posthtml/posthtml-hash) hashes `bundle.css` and `bundle.js`.
+[posthtml-hash](https://github.com/posthtml/posthtml-hash) hashes the filenames for `bundle.css` and `bundle.js`.
 
 #### Minification
 
 [htmlnano](https://github.com/posthtml/htmlnano) minifies `build/index.html`.
 
-## Customization
-
-### Remove HTML minification
+To forgo HTML minification, remove `htmlnano` from the list of PostHTML plugins.
 
 ```diff
 # rollup.config.js
