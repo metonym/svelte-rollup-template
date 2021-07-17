@@ -9,7 +9,7 @@
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.0.0",
     "htmlnano": "^1.0.0",
-    "posthtml": "^0.15.2",
+    "posthtml": "^0.16.4",
     "posthtml-hash": "^1.2.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.51.1",
