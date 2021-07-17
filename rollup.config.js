@@ -29,7 +29,7 @@ function hashStatic() {
         // https://github.com/posthtml/htmlnano
         htmlnano(),
       ])
-        .process(fs.readFileSync(`${OUT_DIR}/index.html`))
+        .process(fs.readFileSync(`${OUT_DIR}/index.html`, 'utf-8'))
         .then((result) =>
           fs.writeFileSync(`${OUT_DIR}/index.html`, result.html)
         );
