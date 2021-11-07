@@ -8,7 +8,6 @@ import css from 'rollup-plugin-css-only'
 import fs from "fs";
 import posthtml from "posthtml";
 import { hash } from "posthtml-hash";
-import htmlnano from "htmlnano";
 import rimraf from "rimraf";
 
 const PROD = !process.env.ROLLUP_WATCH;
@@ -24,10 +23,6 @@ function hashStatic() {
       posthtml([
         // hashes `bundle.[hash].css` and `bundle.[hash].js`
         hash({ path: OUT_DIR }),
-
-        // minifies `build/index.html`
-        // https://github.com/posthtml/htmlnano
-        htmlnano(),
       ])
         .process(fs.readFileSync(`${OUT_DIR}/index.html`, 'utf-8'))
         .then((result) =>
