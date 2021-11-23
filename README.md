@@ -40,7 +40,7 @@ yarn
 
 Runs the app in development mode. Visit [http://localhost:3000](http://localhost:3000) to view the app.
 
-Customize the port number in [rollup.config.js](rollup.config.js#L55).
+Customize the port number in [rollup.config.js](rollup.config.js#L47).
 
 ```diff
 serve({
