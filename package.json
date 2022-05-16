@@ -1,7 +1,5 @@
 {
-  "name": "svelte-rollup-template",
-  "version": "0.7.3",
-  "license": "MIT",
+  "private": true,
   "scripts": {
     "dev": "rollup -cw",
     "build": "rollup -c"
