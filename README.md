@@ -17,7 +17,7 @@ This set-up is a solution for a [GitHub issue about hashing file names](https://
   </head>
   <body>
 -   <script src="bundle.[hash].js"></script>
-+   <script src="bundle.0cbdc0ab51655f1893e1.js"></script>
++   <script src="bundle.e67bddd21fcaec31b27c.js"></script>
   </body>
 </html>
 ```
