@@ -8,7 +8,7 @@ import css from "rollup-plugin-css-only";
 import fs from "fs";
 import posthtml from "posthtml";
 import { hash } from "posthtml-hash";
-import rimraf from "rimraf";
+import { rimrafSync } from "rimraf";
 
 const PROD = !process.env.ROLLUP_WATCH;
 const OUT_DIR = "build";
@@ -16,7 +16,7 @@ const OUT_FILE = `${OUT_DIR}/index.html`;
 
 const hashStatic = () => ({
   name: "hash-static",
-  buildStart: () => rimraf.sync(OUT_DIR),
+  buildStart: () => rimrafSync(OUT_DIR),
   writeBundle: () => {
     posthtml([hash({ path: OUT_DIR })])
       .process(fs.readFileSync(OUT_FILE, "utf-8"))
