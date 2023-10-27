@@ -13,11 +13,11 @@ This set-up is a solution for a [GitHub issue about hashing file names](https://
     <meta charset="utf-8">
     <title>Svelte Rollup Template</title>
 -   <link rel="stylesheet" href="bundle.[hash].css">
-+   <link rel="stylesheet" href="bundle.6c0c7a271e461f676648.css">
++   <link rel="stylesheet" href="bundle.8cafcc832f6eac1fd04a.css">
   </head>
   <body>
 -   <script src="bundle.[hash].js"></script>
-+   <script src="bundle.e67bddd21fcaec31b27c.js"></script>
++   <script src="bundle.f03bbb7cae8df0138056.js"></script>
   </body>
 </html>
 ```
