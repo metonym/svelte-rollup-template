@@ -1,11 +1,12 @@
 import svelte from "rollup-plugin-svelte";
 import resolve from "@rollup/plugin-node-resolve";
-import { terser } from "rollup-plugin-terser";
+import terser from "@rollup/plugin-terser";
 import livereload from "rollup-plugin-livereload";
 import serve from "rollup-plugin-serve";
 import copy from "rollup-plugin-copy";
 import css from "rollup-plugin-css-only";
-import fs from "fs";
+import fs from "node:fs";
+import path from "node:path";
 import posthtml from "posthtml";
 import { hash } from "posthtml-hash";
 import { rimrafSync } from "rimraf";
@@ -35,9 +36,7 @@ export default {
   plugins: [
     copy({ targets: [{ src: "public/*", dest: OUT_DIR }] }),
     svelte({
-      compilerOptions: {
-        dev: !PROD,
-      },
+      compilerOptions: { dev: !PROD },
     }),
     css({ output: "bundle.[hash].css" }),
     resolve(),

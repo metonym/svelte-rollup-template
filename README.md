@@ -31,12 +31,12 @@ Scaffold a new project using [degit](https://github.com/Rich-Harris/degit):
 ```bash
 npx degit metonym/svelte-rollup-template svelte-app
 cd svelte-app
-yarn
+npm install
 ```
 
 ## Available Scripts
 
-### `yarn dev`
+### `npm run dev`
 
 Runs the app in development mode. Visit [http://localhost:3000](http://localhost:3000) to view the app.
 
@@ -50,9 +50,11 @@ serve({
 })
 ```
 
-### `yarn build`
+### `npm run build`
 
 Builds the app for production.
+
+The output is written to the `build` directory. This folder should not be committed to version control.
 
 [PostHTML](https://github.com/posthtml/posthtml) is executed in a [custom Rollup plugin](rollup.config.js#L16) that taps into the `writeBundle` hook.
 
